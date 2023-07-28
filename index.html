@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>Cyber Pet</title>
+</head>
+<body>
+    <div id="introWrap" class="intro-wrap">
+        <div class="intro-item"><h1>Choose your pet</h1></div>
+        <div>
+            <input type="radio" id="dogRadio" name="cat-dog-radio">
+            <label for="dogRadio">Dog</label>
+            <input type="radio" id="catRadio" name="cat-dog-radio">
+            <label for="catRadio">Cat</label>
+            <input type="radio" id="hamsterRadio" name="cat-dog-radio">
+            <label for="hamsterRadio">Hamster</label>
+        </div>
+        <div class="intro-item">
+            <label for="name-input">Name:</label>
+            <input type="text" id="nameInput">
+        </div class="intro-item">
+            <button id="createButton">Create Pet!</button>
+            <p id="errorEmpty" class="hidden">Please choose an animal type and enter a name</p>
+    </div>
+    
+    <div id="dogWrap" class="hidden animal-wrap">
+        <div class="animal-wrap-inner">
+            <h2 id="dogName"></h2>
+            <div class="animal-img-wrap">
+                <img class="animal-img"  src="./images/happy-dog.png" id="dogPicture">
+            </div>
+            <div class="bar-wrap">
+                <div class="each-bar-wrap">
+                    <p class="bar-text">Health:</p>
+                    <div id="dogHealth" class="dog-health">
+                        <div id="dogHealthBar">
+                            <p id="dogHealthPercent"  class="percent">100%</p>
+                        </div>
+                    </div>
+                    <div class="sprite-wrap">
+                        <img class="sprites hidden" id="dogHealthSprite" src="./images/Health-sprite-img.png">
+                    </div>
+                </div>
+                <div class="each-bar-wrap">
+                <p class="bar-text">Hunger:</p>
+                <div class="dog-health">
+                    <div id="dogHungerBar">
+                        <p id="dogHungerPercent"  class="percent">100%</p>
+                    </div>
+                </div>
+                <div class="sprite-wrap">
+                    <img class="sprites hidden" id="dogHungerSprite" src="./images/chicken_drumstick_01.svg">
+                </div>
+                </div>
+                <div class="each-bar-wrap">
+                <p class="bar-text">Thirst:</p>
+                <div class="dog-health">
+                    <div id="dogThirstBar">
+                    <p id="dogThirstPercent"  class="percent">100%</p>    
+                    </div>
+                </div>
+                <div class="sprite-wrap">
+                    <img class="sprites hidden" id="dogThirstSprite" src="./images/water_mug.svg">
+                </div>
+                </div>
+                <div class="each-bar-wrap">
+                <p class="bar-text">Happiness:</p>
+                <div class="dog-health">
+                    <div id="dogHappyBar">
+                        <p id="dogHappyPercent" class="percent">100%</p>
+                    </div>
+                </div>
+                <div class="sprite-wrap">
+                    <img class="sprites hidden" id="dogPlaySprite" src="./images/fetch-sprite.png">
+                </div>
+                </div>
+            </div>
+            <div>
+                <button id="dogFeed" class="interact-button">Feed</button>
+                <button id="dogHydrate" class="interact-button">Hydrate</button>
+                <button id="dogPlay" class="interact-button">Play Fetch</button>
+            </div>
+        </div>
+    </div>
+    <div id="catWrap"  class="hidden">
+        <div class="animal-wrap-inner">
+            <h2 id="catName"></h2>
+            <div class="animal-img-wrap">
+                <img class="animal-img" src="./images/happy-cat.jpg" id="catPicture">
+            </div>
+            <div class="bar-wrap">
+                <div class="each-bar-wrap">
+                    <p class="bar-text">Health:</p>
+                    <div id="catHealth" class="cat-health">
+                        
+                        <div id="catHealthBar">
+                            <p id="catHealthPercent" class="percent">100%</p>
+                        </div>
+                    </div>
+                    <div class="sprite-wrap">
+                        <img class="sprites hidden" id="catHealthSprite" src="./images/Health-sprite-img.png">
+                    </div>
+                </div>
+                <div class="each-bar-wrap">
+                    <p class="bar-text">Hunger:</p>
+                    <div class="cat-health">
+                        <div id="catHungerBar">
+                            <p id="catHungerPercent" class="percent">100%</p>
+                        </div>
+                    </div>
+                    <div class="sprite-wrap">
+                        <img class="sprites hidden" id="catHungerSprite" src="./images/chicken_drumstick_01.svg">
+                    </div>
+                </div>
+                <div class="each-bar-wrap">
+                    <p class="bar-text">Thirst:</p>
+                    <div class="cat-health">
+                        <div id="catThirstBar">
+                            <p id="catThirstPercent" class="percent">100%</p>
+                        </div>
+                    </div>
+                    <div class="sprite-wrap">
+                        <img class="sprites hidden" id="catThirstSprite" src="./images/water_mug.svg">
+                    </div>
+                </div>
+                <div class="each-bar-wrap">
+                    <p class="bar-text">Content:</p>
+                    <div class="cat-health">
+                        <div id="catContentBar">
+                            <p id="catContentPercent" class="percent">100%</p>
+                        </div>
+                    </div>
+                    <div class="sprite-wrap">
+                        <img class="sprites hidden" id="catContentSprite" src="./images/wool-sprite-img.png">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="catFeed" class="interact-button">Feed</button>
+                <button id="catHydrate" class="interact-button">Hydrate</button>
+                <button id="catPlay" class="interact-button">Play with wool</button>
+            </div>
+        </div>
+    </div>
+    <!-- Hamster below -->
+    <div id="hamsterWrap" class="hidden animal-wrap">
+        <div class="animal-wrap-inner">
+            <h2 id="hamsterName"></h2>
+            <div class="animal-img-wrap">
+                <img class="animal-img"  src="./images/happy-hamster.jpg" id="hamsterPicture">
+            </div>
+            <div class="bar-wrap">
+                <div class="each-bar-wrap">
+                    <p class="bar-text">Health:</p>
+                    <div id="hamsterHealth" class="hamster-health">
+                        <div id="hamsterHealthBar">
+                            <p id="hamsterHealthPercent"  class="percent">100%</p>
+                        </div>
+                    </div>
+                    <div class="sprite-wrap">
+                        <img class="sprites hidden" id="hamsterHealthSprite" src="./images/Health-sprite-img.png">
+                    </div>
+                </div>
+                <div class="each-bar-wrap">
+                <p class="bar-text">Hunger:</p>
+                <div class="hamster-health">
+                    <div id="hamsterHungerBar">
+                        <p id="hamsterHungerPercent"  class="percent">100%</p>
+                    </div>
+                </div>
+                <div class="sprite-wrap">
+                    <img class="sprites hidden" id="hamsterHungerSprite" src="./images/chicken_drumstick_01.svg">
+                </div>
+                </div>
+                <div class="each-bar-wrap">
+                <p class="bar-text">Thirst:</p>
+                <div class="hamster-health">
+                    <div id="hamsterThirstBar">
+                    <p id="hamsterThirstPercent"  class="percent">100%</p>    
+                    </div>
+                </div>
+                <div class="sprite-wrap">
+                    <img class="sprites hidden" id="hamsterThirstSprite" src="./images/water_mug.svg">
+                </div>
+                </div>
+                <div class="each-bar-wrap">
+                <p class="bar-text">Exercise:</p>
+                <div class="hamster-health">
+                    <div id="hamsterExerciseBar">
+                        <p id="hamsterExercisePercent" class="percent">100%</p>
+                    </div>
+                </div>
+                <div class="sprite-wrap">
+                    <img class="sprites hidden" id="hamsterWheelSprite" src="./images/h-wheel-sprite.png">
+                </div>
+                </div>
+            </div>
+            <div>
+                <button id="hamsterFeed" class="interact-button">Feed</button>
+                <button id="hamsterHydrate" class="interact-button">Hydrate</button>
+                <button id="hamsterWheel" class="interact-button">Hamster wheel</button>
+            </div>
+        </div>
+    </div>
+    
+        
+    
+    <div id="endGameWrap" class="hidden endGameWrap">
+        <p id="deathScene" class="end-game-text"></p>
+        <p id="totalTimePlayed" class="end-game-text"></p>
+        <h2>Do you want to play again?</h2>
+        <button id="restartButton">Yes</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
